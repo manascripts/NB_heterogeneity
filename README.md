@@ -1,3 +1,6 @@
+# Gene-expression Data retrieval and pre-processing
+The list of datasets has been provided in 'NeuroblastomaSI.xlsx'. Follow instructions from https://github.com/priyanka8993/EMT_score_calculation to retrieve and pre-process microarray data and https://github.com/sushimndl/EMT_Scoring_RNASeq for RNA-sequencing datasets
+
 # Random Swap analysis 
 To generate histograms for PC1 variance for random comnbinations of NOR/MES genelists and Housekeeping genes, use the PC1_Variance_Histogram.r script 
 Add pre-processed gene-expression matrix files as tab-delimited .txt files in the datasets folder.
