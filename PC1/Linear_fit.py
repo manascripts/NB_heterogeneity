@@ -22,8 +22,8 @@ def fit_fun(df,f):
     plt.plot(df['Swaps'], y_fit, label='fit')
     plt.ylabel('Mean (PC1-Variance)')
     plt.xlabel('Swaps')
-    plt.title('GSE17714', fontdict = {'size': 18})
-    plt.text(0.7, 0.22, str(f.__name__)+'\nA: '+str(round(popt[0], 3))+'\nn: '+str(round(popt[1], 3))+'\nMSE: '+str(round(MSE, 6))+'\nR2: '+str(round(R2, 3)))
+    plt.title('GSEID', fontdict = {'size': 18})
+    plt.text(0.5, 0.5, str(f.__name__)+'\nA: '+str(round(popt[0], 3))+'\nn: '+str(round(popt[1], 3))+'\nMSE: '+str(round(MSE, 6))+'\nR2: '+str(round(R2, 3)))
     plt.savefig('GSE17714'+'_'+'fit-'+str(f.__name__)+'.png')
     plt.show()
 
