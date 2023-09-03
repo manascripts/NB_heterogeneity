@@ -1,4 +1,4 @@
-# Gene-expression Data retrieval and pre-processing
+# Gene-expression data retrieval and pre-processing
 The list of datasets has been provided in 'NeuroblastomaSI.xlsx'. 
 
 Follow instructions from https://github.com/priyanka8993/EMT_score_calculation to retrieve and pre-process microarray data and https://github.com/sushimndl/EMT_Scoring_RNASeq for RNA-sequencing datasets.
