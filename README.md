@@ -13,4 +13,4 @@ To create boxplots with random swaps of NOR/MES genelist with housekeeping genes
 Add mean values of PC1 variance for corresponding number of swaps to a GSEID.csv file (column1: Number of Swaps, Column2: Mean Variance) in the PC1_Means folder and use the Linear_fit.py script to visualize the fit and obtain R-squared value, mean squared error value, slope and intercept for the fit.
 
 # PCA, K-Means and GSEA
-To perform PCA and K-means clustering on gene-expression data, add pre-processed gene-expression matrix files as tab-delimited .txt files in the data folder. Use PCA.py script for PCA and K-Means and GSEA.py for GSEA on the two generated clusters. Use the signature.gmt file as input for GSEA.
+To perform PCA and K-means clustering on gene-expression data, add pre-processed gene-expression matrix files as tab-delimited .txt files in the data folder. Use PCA.py script for PCA and K-Means and GSEA.py for GSEA on the two generated clusters. Use the signature.gmt file as input for GSEA. Create an Output folder to store GSEA outputs and PCA plots.
