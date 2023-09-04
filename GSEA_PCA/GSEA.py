@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from matplotlib.pyplot import figure
 import gseapy as gp
 
-df=pd.read_csv('./Data/GSEID.txt', sep= " ",header=None).transpose()
+df=pd.read_csv('.GSEA_PCA/Data/GSEID.txt', sep= " ",header=None).transpose()
 df.columns=df.iloc[0]
 df=df.drop([0])
 df=df.fillna(0)
