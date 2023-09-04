@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 from matplotlib.pyplot import figure
 
 #%%
-os.chdir("./Datasets/GSEID/")
+os.chdir("./Data/GSEID/")
 loc=os.getcwd()+"\\"
 match=[]
 for file in os.listdir(loc):
