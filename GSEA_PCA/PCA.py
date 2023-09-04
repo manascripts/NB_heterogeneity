@@ -52,7 +52,7 @@ def kmean_PC(PC,geneset,pca):
     plt.xlabel("PC1"+' '+'('+str(round(xx.explained_variance_ratio_[0]*100, 2))+'%'+')', fontname="Arial", fontsize=45, fontweight="bold")
     plt.ylabel("PC2"+' '+'('+str(round(xx.explained_variance_ratio_[1]*100, 2))+'%'+')', fontname="Arial", fontsize=45, fontweight="bold")
     plt.title(geneset.split("_")[0], fontweight="bold", fontname="Arial", fontsize=48)
-    plt.savefig('../../../PCA_variance/'+geneset.split("_")[0]+'_kmeans_PC1_PC2.png')
+    plt.savefig('../Output/'+geneset.split("_")[0]+'_kmeans_PC1_PC2.png')
     plt.show()
 
 #%%
