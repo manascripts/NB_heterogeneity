@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 from matplotlib.pyplot import figure
 import gseapy as gp
 
-df=pd.read_csv('.GSEA_PCA/Data/GSEID.txt', sep= " ",header=None).transpose()
+df=pd.read_csv('./GSEA_PCA/Data/GSEID.txt', sep= " ",header=None).transpose()
 df.columns=df.iloc[0]
 df=df.drop([0])
 df=df.fillna(0)
@@ -31,7 +31,7 @@ for i in range(len(PC['PC1'])):
 
 df1=df.transpose()
 gs_res = gp.gsea(data = df1,
-                 gene_sets="../signature.gmt",
+                 gene_sets="./GSEA_PCA/signature.gmt",
                  cls= cls,
                  # set permutation_type to phenotype if samples >=15
                  permutation_type = 'phenotype',
