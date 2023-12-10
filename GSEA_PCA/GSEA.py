@@ -13,11 +13,6 @@ df=pd.read_csv('./GSEA_PCA/Data/GSEID.txt', sep= " ",header=None).transpose()
 df.columns=df.iloc[0]
 df=df.drop([0])
 df=df.fillna(0)
-X_std = StandardScaler().fit_transform(df)
-pca = PCA(n_components = 4)
-principalComponents = pca.fit_transform(X_std)
-PC = pd.DataFrame(principalComponents,columns = ["PC" + str(x+1) for x in range(4)])
-model = KMeans(n_clusters=2).fit(df)
 
 cutoff = 10; #cutoff is where you set the classification
 cls=[]
