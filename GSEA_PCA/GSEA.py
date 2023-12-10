@@ -28,7 +28,6 @@ df1=df.transpose()
 gs_res = gp.gsea(data = df1,
                  gene_sets="./GSEA_PCA/signature.gmt",
                  cls= cls,
-                 # set permutation_type to phenotype if samples >=15
                  permutation_type = 'phenotype',
                  permutation_num = 100,
                  outdir='../Output/',
