@@ -14,7 +14,7 @@ df.columns=df.iloc[0]
 df=df.drop([0])
 df=df.fillna(0)
 
-cutoff = 10; #cutoff is where you set the classification
+cutoff = 10; #cutoff is where you set the classification between clusters
 cls=[]
 for i in range(len(PC['PC1'])):
     if PC['PC1'][i] < cutoff:
