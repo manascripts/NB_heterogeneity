@@ -31,7 +31,7 @@ gs_res = gp.gsea(data = df1,
                  # set permutation_type to phenotype if samples >=15
                  permutation_type = 'phenotype',
                  permutation_num = 100,
-                 outdir='../Output',
+                 outdir='../Output/',
                  no_plot = False, # Skip plotting
                  method='signal_to_noise',
                  processes = 4, seed = 7,
