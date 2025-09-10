@@ -1,16 +1,63 @@
-# Gene-expression data retrieval and pre-processing
-The list of datasets has been provided in 'NeuroblastomaSI.xlsx'. 
+# Gene-Expression Data Retrieval and Pre-processing
 
-Follow instructions from https://github.com/priyanka8993/EMT_score_calculation to retrieve and pre-process microarray data and https://github.com/sushimndl/EMT_Scoring_RNASeq for RNA-sequencing datasets.
+The list of datasets used in this analysis is provided in supplementary table[`NeuroblastomaSI.xlsx`](https://www.tandfonline.com/action/downloadSupplement?doi=10.1080%2F15384047.2024.2301802&file=kcbt_a_2301802_sm6771.xlsx) of the [paper](https://doi.org/10.1080/15384047.2024.2301802).
 
-# Random gene-swap analysis 
-To generate histograms for PC1 variance for random comnbinations of NOR/MES genelists and housekeeping genes, use the PC1_Variance_Histogram.r script. 
-Add pre-processed gene-expression matrix files as tab-delimited .txt files in the datasets folder.
+To retrieve and pre-process gene-expression data:
 
-To generate boxplots with random swaps of NOR/MES genelist with housekeeping genes (one at a time) use the PC1_Swap.r script
+- For **microarray datasets**, follow instructions from [EMT_score_calculation](https://github.com/priyanka8993/EMT_score_calculation).
+- For **RNA-sequencing datasets**, refer to [EMT_Scoring_RNASeq](https://github.com/sushimndl/EMT_Scoring_RNASeq).
 
-# Linear fit to PC1 means
-Add mean values of PC1 variance for corresponding number of swaps to a GSEID.csv file (column1: Number of Swaps, Column2: Mean Variance) in the PC1_Means folder and use the Linear_fit.py script to visualize the fit and obtain R-squared value, mean squared error value, slope and intercept for the fit.
+---
 
-# PCA, K-Means and GSEA
-To perform PCA and K-means clustering on gene-expression data, add pre-processed gene-expression matrix files as tab-delimited .txt files in the data folder. Use PCA.py script for PCA and K-Means and GSEA.py for GSEA on the two generated clusters. Use the signature.gmt file as input for GSEA. Create an Output folder to store GSEA outputs and PCA plots.
+# Random Gene-Swap Analysis
+
+To explore PC1 variance using random gene combinations:
+
+- Use `PC1_Variance_Histogram.r` to generate histograms for PC1 variance across random combinations of NOR/MES gene lists and housekeeping genes.
+- Add pre-processed gene-expression matrix files as tab-delimited `.txt` files in the `datasets/` folder.
+
+- Use `PC1_Swap.r` to generate boxplots by swapping NOR/MES genes with housekeeping genes (one at a time).
+
+---
+
+# Linear Fit to PC1 Means
+
+To visualize the relationship between gene swaps and PC1 variance:
+
+1. Create a `GSEID.csv` file in the `PC1_Means/` folder with the following structure:  
+   - **Column 1**: Number of Swaps  
+   - **Column 2**: Mean Variance
+
+2. Run `Linear_fit.py` to generate the linear fit and obtain:
+   - R-squared value  
+   - Mean squared error  
+   - Slope and intercept
+
+---
+
+# PCA, K-Means Clustering, and GSEA
+
+To perform dimensionality reduction and enrichment analysis:
+
+- Add pre-processed gene-expression matrix files as tab-delimited `.txt` files to the `data/` folder.
+- Run `PCA.py` for Principal Component Analysis and K-Means clustering.
+- Use `GSEA.py` to perform Gene Set Enrichment Analysis on the resulting clusters.
+- Provide a gene signature `signature.gmt` file as input for GSEA. Gene signatures can be obtained from [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb).
+
+- Create an `Output/` folder to store:
+  - PCA plots  
+  - GSEA results
+
+---
+
+## Citation
+
+If you use this repository or its contents in your work, please cite the following publication:
+
+**Mutually exclusive teams-like patterns of gene regulation characterize phenotypic heterogeneity along the noradrenergic-mesenchymal axis in neuroblastoma**  
+*Cancer Biology & Therapy (2024)*  
+DOI: [10.1080/15384047.2024.2301802](https://doi.org/10.1080/15384047.2024.2301802)
+
+---
+
+
